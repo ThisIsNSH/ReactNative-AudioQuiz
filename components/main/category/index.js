@@ -10,7 +10,7 @@ export default class Category extends Component {
     }
 
     arrowTapped(event) {
-        this.props.navigation.navigate("Quiz", {question: "Rolex is a company that specializes in what type of product?", questionNo: "Question 1", option1: "Watches", option2: "Cars", option3: "Computers", option4: "Sports equipment"})
+        this.props.navigation.navigate("Quiz", {category: this.props.category })
     }
 
     render() {
@@ -28,7 +28,8 @@ export default class Category extends Component {
 
 Category.propTypes = {
     text: PropTypes.string,
-    image: PropTypes.string
+    image: PropTypes.string,
+    category: PropTypes.string,
 };
 
 const styles = StyleSheet.create({

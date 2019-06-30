@@ -4,7 +4,7 @@ Audio Quiz is a cross-platform multi-screen quiz app which blind & non-blind use
 
 ### Screenshots 
 
-<img src="ss/ss1.png" width="25%">  <img src="ss/ss2.png" width="25%">  <img src="ss/ss3.png" width="25%">  <img src="ss/ss4.png" width="25%">
+<img src="ss/ss1.png" width="25%">  <img src="ss/ss2.png" width="25%">  <img src="ss/ss3.png" width="25%">  <img src="ss/ss5.png" width="25%">
 
 ### Used
 
