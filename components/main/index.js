@@ -36,6 +36,13 @@ export default class Main extends Component {
         this.renderRow = this.renderRow.bind(this)
     }
 
+    componentDidMount() {
+        console.log('asasasas')
+        this.setState({
+            dataSource: this.state.dataSource
+        });
+    }
+
     renderRow(rowData) {
         return <Category text={rowData.text} image={rowData.image} category={rowData.category} navigation={this.props.navigation}/>
     }

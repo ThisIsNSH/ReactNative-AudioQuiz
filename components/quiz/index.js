@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, Image, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Alert, AsyncStorage } from 'react-native';
 import PropTypes from 'prop-types';
 
 export default class Quiz extends Component {
@@ -12,6 +12,7 @@ export default class Quiz extends Component {
         super(props)
 
         const { navigation } = this.props;
+        this.nav = navigation.getParam('nav');
         this.category = navigation.getParam('category', '9');
 
         this.state = {
@@ -42,14 +43,41 @@ export default class Quiz extends Component {
 
     optionSelected(text) {
         if (text == this.state.questions[this.state.no - 1].correct_answer) {
-            this.setState({
-                no: this.state.no + 1,
-                correct: this.state.correct + 1
-            })
+            if (this.state.no < 10) {
+                this.setState({
+                    no: this.state.no + 1,
+                    correct: this.state.correct + 1
+                })
+            } else {
+                AsyncStorage.setItem('@' + this.state.category, JSON.stringify(this.state.correct + 1), () => {
+                    Alert.alert(
+                        this.state.correct + 1 + '/10',
+                        'You have answered all questions in this category. Play other category now!',
+                        [
+                            { text: 'OK', onPress: () => this.nav.navigate("Main") },
+                        ],
+                        { cancelable: true },
+                    );
+                });
+
+            }
         } else {
-            this.setState({
-                no: this.state.no + 1,
-            })
+            if (this.state.no < 10) {
+                this.setState({
+                    no: this.state.no + 1,
+                })
+            } else {
+                AsyncStorage.setItem('@' + this.state.category, JSON.stringify(this.state.correct), () => {
+                    Alert.alert(
+                        this.state.correct + '/10',
+                        'You have answered all questions in this category. Play other category now!',
+                        [
+                            { text: 'OK', onPress: () => this.nav.navigate("Main") },
+                        ],
+                        { cancelable: true },
+                    );
+                });
+            }
         }
     }
 
@@ -161,7 +189,7 @@ const styles = StyleSheet.create({
         color: '#8FE90D',
         justifyContent: 'center',
         textAlign: 'center',
-        fontWeight: '500' ,
+        fontWeight: '500',
         textAlignVertical: 'center',
         alignItems: 'center',
         justifyContent: 'center',
