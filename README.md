@@ -4,9 +4,9 @@ Audio Quiz is a cross-platform multi-screen quiz app which blind & non-blind use
 
 ### Screenshots 
 
-<img src="ss/ss1.png" width="25%">  <img src="ss/ss2.png" width="25%">  <img src="ss/ss3.png" width="25%">  <img src="ss/ss5.png" width="25%">
+<img src="ss/ss1.png" width="25%">  <img src="ss/gif2.gif" >  <img src="ss/gif1.gif" >  <img src="ss/ss2.png" width="25%"> 
 
-After playing the quiz the scores are stored and locked. Pop up is displayed after completing the quiz and if trying to play already played quiz.
+The quiz questions and options are spoken using TTS with proper pause in between shuffled options. After playing the quiz the scores are stored and locked. Pop up is displayed after completing the quiz and if trying to play already played quiz.
 
 <img src="ss/ss8.png" width="25%">  <img src="ss/ss7.png" width="25%">  <img src="ss/ss6.png" width="25%">  
 
@@ -17,5 +17,6 @@ After playing the quiz the scores are stored and locked. Pop up is displayed aft
 * ObjectiveC Xcode
 * Java AndroidStudio
 * JavaScript CSS
+* Google Text-to-Speech
 
 
