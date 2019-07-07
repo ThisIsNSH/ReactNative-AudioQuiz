@@ -76,7 +76,7 @@ export default class Splash extends Component {
 
         return (
             <View style={styles.container}>
-                <Image style={{ width: 100, height: 100 }} source={{ uri: '/Users/thisisnsh/Desktop/projects/quiz/assets/bulb.png' }}></Image>
+                <Image style={{ width: 100, height: 100 }} source={require('../../assets/bulb.png')}></Image>
                 <Text style={styles.title}>Audio Quiz{"\n"}<Text style={styles.instructions}>{instructions} Version</Text></Text>
             </View>
         );

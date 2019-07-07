@@ -4,11 +4,13 @@ Audio Quiz is a cross-platform multi-screen quiz app which blind & non-blind use
 
 ### Screenshots 
 
-<img src="ss/ss1.png" width="25%">  <img src="ss/gif2.gif" >  <img src="ss/gif1.gif" >  <img src="ss/ss2.png" width="25%"> 
+<img src="ss/ss1.png" width="25%">  <img src="ss/gif2.gif" >  <img src="ss/gif1.gif" >  
 
-The quiz questions and options are spoken using TTS with proper pause in between shuffled options. After playing the quiz the scores are stored and locked. Pop up is displayed after completing the quiz and if trying to play already played quiz.
+The quiz questions and options are sent to GoogleTTS with a proper pause in the string and then the base64 fetched from the response is parsed to the audio file to speak the question and options in shuffled order. After playing the quiz the scores are stored and locked in persistent storage. Pop up is displayed after completing the quiz and if trying to play already played quiz.
 
-<img src="ss/ss8.png" width="25%">  <img src="ss/ss7.png" width="25%">  <img src="ss/ss6.png" width="25%">  
+Tap & Speak Answer button allows users to speak the option and the recorded file is then converted to base64 string and is sent for recognition to Google STT and then the test is matched.
+
+<img src="ss/ss2png" width="25%">  <img src="ss/ss8.png" width="25%">  <img src="ss/ss5.png" width="25%">  
 
 ### Used
 
@@ -18,5 +20,6 @@ The quiz questions and options are spoken using TTS with proper pause in between
 * Java AndroidStudio
 * JavaScript CSS
 * Google Text-to-Speech
+* Google Speech-to-Text
 
 
