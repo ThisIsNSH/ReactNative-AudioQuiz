@@ -10,7 +10,7 @@ The quiz questions and options are sent to GoogleTTS with a proper pause in the 
 
 Tap & Speak Answer button allows users to speak the option and the recorded file is then converted to base64 string and is sent for recognition to Google STT and then the test is matched.
 
-<img src="ss/ss2png" width="25%">  <img src="ss/ss8.png" width="25%">  <img src="ss/ss5.png" width="25%">  
+<img src="ss/ss2.png" width="25%">  <img src="ss/ss8.png" width="25%">  <img src="ss/ss5.png" width="25%">  
 
 ### Used
 
